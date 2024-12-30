@@ -1,0 +1,385 @@
+/* Archivo styles.css */
+
+/* Variables de color */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --accent-color: #28a745;
+}
+
+/* Primera Línea */
+.d-flex.justify-content-between {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 0.9rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.d-flex h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.d-flex h1 span:first-child {
+  color: var(--accent-color); /* Resaltar "Airport" */
+}
+
+.d-flex h1 span:last-child {
+  color: var(--dark-color); /* Color más neutro para "Services" */
+}
+
+.d-flex div {
+  font-weight: 500;
+}
+
+/* Navegador */
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--light-color);
+  font-size: 1rem;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.navbar .ms-2 i {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .ms-2 i:hover {
+  color: var(--accent-color);
+}
+
+.navbar .navbar-toggler {
+  border-color: var(--light-color);
+}
+
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url('airport-bg.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Oscurecer imagen de fondo */
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .btn {
+  font-size: 1.25rem;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-section .btn:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Estilos para la sección Sobre Nosotros */
+#sobre-nosotros {
+  background-color: var(--light-color);
+  padding: 3rem 0;
+}
+
+.about-image img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#sobre-nosotros h2 {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+#sobre-nosotros p {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+#sobre-nosotros ul li {
+  font-size: 1rem;
+  color: var(--dark-color);
+}
+
+#sobre-nosotros .btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#sobre-nosotros .btn-primary:hover {
+  background-color: var(--accent-color);
+}
+
+/* Estilos para la sección de servicios */
+#servicios {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 0;
+  background-image: linear-gradient(to bottom right, #007bff, #0056b3);
+}
+
+#servicios h2 {
+  font-weight: bold;
+  color: var(--ligh-color);
+}
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h5 {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+
+.service-card p {
+  font-size: 0.9rem;
+}
+
+.service-card .btn {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.service-card .btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Estilos para la sección Propiedades */
+#propiedades {
+  background-color: var(--light-color);
+  padding: 3rem 0;
+}
+
+#propiedades h2 {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.property-card {
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.property-info h5 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.property-info p {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.property-info .btn {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Estilos para la sección Beneficios */
+#beneficios {
+  background-color: var(--light-color);
+  padding: 3rem 0;
+}
+
+#beneficios h2 {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.benefit-card {
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon i {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.benefit-card h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Estilos para la sección Blog */
+#blog {
+  background-color: var(--light-color);
+  padding: 3rem 0;
+}
+
+#blog h2 {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+#blog .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#blog .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#blog .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+#blog .card-text {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+#blog .btn {
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#blog .btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Estilos para la sección Contacto */
+#contacto {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 0;
+}
+
+#contacto h2 {
+  font-weight: bold;
+  color: var(--ligkt-color);
+}
+
+#contacto .form-label {
+  color: white;
+}
+
+#contacto .form-control {
+  border-radius: 10px;
+  border: 1px solid var(--light-color);
+}
+
+#contacto .btn {
+  border-radius: 30px;
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contacto .btn:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* Estilos para el Footer */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: var(--light-color);
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+footer .bi {
+  font-size: 2rem;
+}
+
+
+/* Modales: Imagen y Contenido */
+.modal-body img {
+  max-height: 400px; /* Ajustar altura máxima */
+  width: 100%;
+  object-fit: cover; /* Mantener proporción y llenar el espacio */
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
